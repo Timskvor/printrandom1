@@ -8,7 +8,8 @@ enum
     MOD = 0x80000000
 };
 
-typedef struct LinearRandomSource {
+typedef struct LinearRandomSource
+{
     RandomSource base;
     uint32_t state;
 } LinearRandomSource;
