@@ -4,15 +4,15 @@
 typedef struct RandomSource RandomSource;
 
 typedef struct RandomSourceOperations {
-    RandomSource* (*destroy)(RandomSource *src);
+    RandomSource *(*destroy)(RandomSource *src);
     double (*next)(RandomSource *src);
 } RandomSourceOperations;
 
 struct RandomSource {
-    RandomSourceOperations* ops;
+    RandomSourceOperations *ops;
 };
 
-RandomSource* random_linear_factory(const char *params);
-RandomSource* random_random_factory(const char *params);
+RandomSource *random_linear_factory(const char *params);
+RandomSource *random_random_factory(const char *params);
 
 #endif
