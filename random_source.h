@@ -3,12 +3,14 @@
 
 typedef struct RandomSource RandomSource;
 
-typedef struct RandomSourceOperations {
+typedef struct RandomSourceOperations
+{
     RandomSource *(*destroy)(RandomSource *src);
     double (*next)(RandomSource *src);
 } RandomSourceOperations;
 
-struct RandomSource {
+struct RandomSource
+{
     RandomSourceOperations *ops;
 };
 

@@ -4,7 +4,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-typedef struct URandomSource {
+typedef struct URandomSource
+{
     RandomSource base;
     int fd;
 } URandomSource;
