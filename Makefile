@@ -18,4 +18,5 @@ random.o: random.c random_source.h
 	$(CC) $(CFLAGS) -c random.c
 
 clean:
-	rm -f *.o printrandom
+	rm -f *.o printrandom4
+	
